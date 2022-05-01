@@ -10,7 +10,7 @@ if [ $1 -gt "-1" ] && [ $1 -lt "1001" ]
 then
      for pid in $(pgrep -U "$(id -nu "$1")")
          do
-           echo "$pid $(ls /proc/$pid/fd/ 2>> $errFile | wc -l)" 2>> "$errFile"
+           echo "$pid $(ls /proc/$pid/fd/ 2>> $errFile| wc -l)" 2>> "$errFile"
          done
 	while IFS= read -r line; do  echo "$(basename "$0"): $line" >&2; done < "$errFile"
 else
@@ -18,4 +18,5 @@ else
      while IFS= read -r line; do echo "$line" >&2; done < "$errFile"
      exit 1
 fi
+rm $errFile
 exit 0
