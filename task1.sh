@@ -12,7 +12,7 @@ then
          do
            echo "$pid $(ls /proc/$pid/fd/ 2>> $errFile| wc -l)" 2>> "$errFile"
          done
-        while IFS= read -r line; do  echo "$(basename "$0"): $line" >&2; done < "$errFile"
+	while IFS= read -r line; do  echo "$(basename "$0"): $line" >&2; done < "$errFile"
 else
      echo "$(basename "$0"): Invalid user uid: $1" 1>"$errFile"
      while IFS= read -r line; do echo "$line" >&2; done < "$errFile"
