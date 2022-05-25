@@ -21,6 +21,13 @@ are output to the console in the form: process pid, number of files. You cannot 
 commands. Information about the user uid for a running process (program) is located in the /proc/pid/status
 file (you can take the first value in the line as the user uid: “Uid: *** *** *** ***“). Files opened by
 a process (program) - in /proc/pid/fd/.
-```    
+```
+
+## **Task 2**
+
+```
+Write a program that displays all subdirectories in a given directory (the first command line argument) sorted
+by the number of files they contain in descending order. Files are counted at the level of each subdirectory.
+```   
 
 # BASH Linux Terminal
