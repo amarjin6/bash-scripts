@@ -26,8 +26,8 @@ a process (program) - in /proc/pid/fd/.
 ## **Task 2**
 
 ```
-Write a program that displays all subdirectories in a given directory (the first command line argument) sorted
-by the number of files they contain in descending order. Files are counted at the level of each subdirectory.
+Create a script that finds all files in the directory & subdirectory with necessary access rights
+like (444), (755), (777), etc.
 ```   
 
 # BASH Linux Terminal
